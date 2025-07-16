@@ -1,0 +1,78 @@
+
+
+.player-container {
+  max-width: 350px;
+  margin: 2rem auto;
+  background: #222;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  padding: 2rem 1.5rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cover img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.song-info {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.title {
+  font-size: 1.3rem;
+  margin: 0;
+}
+.artist {
+  font-size: 1rem;
+  color: #bbb;
+  margin: 0.2rem 0 0 0;
+}
+.progress-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+.current-time, .duration {
+  font-size: 0.9rem;
+  width: 40px;
+  text-align: center;
+}
+.bar {
+  flex: 1;
+  height: 6px;
+  background: #444;
+  border-radius: 3px;
+  margin: 0 8px;
+  position: relative;
+}
+.progress {
+  width: 40%;
+  height: 100%;
+  background: #ff5e5e;
+  border-radius: 3px;
+}
+.controls {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+.controls button {
+  background: #333;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.controls button:hover {
+  background: #ff5e5e;
+}

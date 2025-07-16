@@ -1,7 +1,7 @@
 ---
-import PlayerPage from "../components/PlayerPage.astro";
+import PlayerPage from "../components/PlayerPage.tsx";
 import SongBar from "../components/SongBar.astro";
-import '../styles/global.css';
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -12,22 +12,28 @@ import '../styles/global.css';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Song Player</title>
+      
+    </header>
+    <h1>Mad Meteor Song Player</h1>
   </head>
   <body>
     <header>
-      <h1>Mad Meteor Song Player</h1>
-    </header>
-    <main>
-      <slot />
-    </main>
-	<PlayerPage />
+      <div class="flex items-start">
+        <main>
+          <slot />
+        </main>
+        <PlayerPage />
+      </div>
+    
+
+    
     <SongBar />
-	
   </body>
 </html>
 
 <style>
-  html, body {
+  html,
+  body {
     margin: 0;
     width: 100%;
     height: 100%;
@@ -39,7 +45,7 @@ import '../styles/global.css';
     padding: 1rem;
     background: #222;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
   main {
     padding-bottom: 20px; /* less space for song bar */

@@ -1,10 +1,26 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import axios from "axios";
+import TarjetaCanciones from "../components/TarjetaCanciones";
+import Layout from "../layouts/Layout.astro";
+import type { Song } from "../types/song";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+const listaCanciones = await axios.get(
+    "https://api.institutoalfa.org/api/songs",
+);
+
+
 ---
 
 <Layout>
-	
+    <div>
+        {
+            listaCanciones.data.songs.map(function (cancion: Song) {
+                return ( <TarjetaCanciones song={cancion} client:visible/>
+            )
+            })
+        }
+    </div>
 </Layout>
