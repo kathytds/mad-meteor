@@ -29,7 +29,7 @@ export default function PlayerPage() {
 
   return (
     <div className="player-container">
-      <audio src={song?.audio.url} controls autoPlay ref={refAudio}></audio>
+      <audio src={song?.audio.url}autoPlay ref={refAudio}></audio>
       <div className="cover">
         <img src={song?.image.url} alt="Song Cover" />
       </div>
