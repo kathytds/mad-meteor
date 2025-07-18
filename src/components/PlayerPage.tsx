@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './PlayerPage.css';
 import { $currentSong } from '../store';
 import type { Song } from '../types/song';
@@ -7,6 +7,8 @@ export default function PlayerPage() {
 
   const [song, setSong] = React.useState<null | Song>(null)
 
+  const refAudio = useRef<null | HTMLAudioElement>(null)
+
   React.useEffect(function () {
     $currentSong.subscribe(function (state) {
       setSong(state)
@@ -14,9 +16,20 @@ export default function PlayerPage() {
     })
   }, [])
 
+  function handlerPlay() {
+    if (refAudio.current) {
+      refAudio.current.play()
+    }
+  }
+  function handlerPause() {
+    if (refAudio.current) {
+      refAudio.current.pause()
+    }
+  }
+
   return (
     <div className="player-container">
-      <audio src={song?.audio.url} controls autoPlay></audio>
+      <audio src={song?.audio.url} controls autoPlay ref={refAudio}></audio>
       <div className="cover">
         <img src={song?.image.url} alt="Song Cover" />
       </div>
@@ -33,7 +46,8 @@ export default function PlayerPage() {
       </div>
       <div className="controls">
         <button className="prev">&#9664;</button>
-        <button className="play">&#9654;</button>
+        <button className="play" onClick={handlerPlay}>&#9654;</button>
+        <button className="pause" onClick={(handlerPause)}>&#10073;&#10073;</button>
         <button className="next">&#9654;&#9654;</button>
       </div>
     </div>
