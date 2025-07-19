@@ -25,7 +25,7 @@ export default function ({ song }: Props) {
                     <p className='opacity-60'>{song.author}</p>
                 </div>
             </div>
-            <button className='bg-sky-500 p2 rounded-full font-bold p-3'
+            <button className='bg-red-200 p2 rounded-full font-bold p-3'
                 onClick={handlerClick}
             >
                 Play

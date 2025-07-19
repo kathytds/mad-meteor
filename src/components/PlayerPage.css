@@ -1,9 +1,7 @@
-
-
 .player-container {
   max-width: 350px;
   margin: 2rem auto;
-  background: #fdb6e8;
+  background: #f9de9c;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.3);
   padding: 2rem 1.5rem;
@@ -11,6 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 2px solid #fff; 
 }
 .cover img {
   width: 180px;
@@ -30,7 +29,7 @@
 }
 .artist {
   font-size: 1rem;
-  color: #bbb;
+  color: #f99256;
   margin: 0.2rem 0 0 0;
 }
 .progress-bar {
@@ -47,7 +46,7 @@
 .bar {
   flex: 1;
   height: 6px;
-  background: #444;
+  background: whitesmoke;
   border-radius: 3px;
   margin: 0 8px;
   position: relative;
@@ -55,7 +54,8 @@
 .progress {
   width: 40%;
   height: 100%;
-  background: #ff5e5e;
+  background: #ea9dae;
+  position: absolute;
   border-radius: 3px;
 }
 .controls {
@@ -64,7 +64,7 @@
   margin-top: 0.5rem;
 }
 .controls button {
-  background: #333;
+  background: #ea9dae;
   border: none;
   color: #fff;
   font-size: 1.5rem;
@@ -74,5 +74,5 @@
   transition: background 0.2s;
 }
 .controls button:hover {
-  background: #ff5e5e;
+  background: #c74e51;
 }
