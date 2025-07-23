@@ -36,12 +36,12 @@ export default function PlayerPage() {
   }
   function handlerNext() {
     if (refAudio.current) {
-      refAudio.current.getNextSong()
+      //refAudio.current.getNextSong()
     }
   }
   function handlerPrevious() {
     if (refAudio.current) {
-      refAudio.current.previous()
+     // refAudio.current.previous()
     }
   }
 

@@ -17,19 +17,19 @@ export default function ({ song }: Props) {
     }
 
     return (
-        <div className='flex items-center p-4'>
-            <div className='flex items-center p-4 gap-8'>
+        <><div className='flex items-center justify-between w-full p-4'>
+            <div className='flex items-center gap-8 w-full'>
                 <img src={song.image.url} alt="" className='w-16 h-16 rounded-full' />
-                <div className='flex-1'>
+                <div className='flex-1' style={{ border: '3px solid #ccc', borderColor: '#ea9dae', borderRadius: '10px', padding: '8px', overflow: 'hidden' }}>
                     <h3 className='font-bold'>{song.title}</h3>
                     <p className='opacity-60'>{song.author}</p>
                 </div>
-            </div>
-            <button className='bg-red-200 p2 rounded-full font-bold p-3'
+            </div><button className='bg-red-200 rounded-full font-bold p-3 ml-12'
                 onClick={handlerClick}
-            >
+        >
                 Play
             </button>
         </div>
+        </>
     );
 }
