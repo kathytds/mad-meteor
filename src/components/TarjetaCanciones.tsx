@@ -1,6 +1,6 @@
 import React from 'react'
 import type { Song } from '../types/song';
-import './tarjetaCanciones.css';
+import './TarjetaCanciones.css';
 import { $currentSong } from '../store';
 
 interface Props {
